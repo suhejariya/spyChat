@@ -21,7 +21,6 @@ class ChatMessage:
         self.time = datetime.now()
         self.sent_by_me = sent_by_me
 
-spy = Spy('bond', 'Mr.', 24, 4.7)
 
 friend_1 = Spy('Ishu', 'Mr.', 20, 7)
 friend_2 = Spy('Neha', 'Ms.', 19, 2)
