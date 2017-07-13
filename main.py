@@ -17,7 +17,6 @@ import time
 
 status_messages=["Do good have good","Busy"]
 special=['sos','SOS','HELP','help']
-li=[]
 
 
 
@@ -72,7 +71,8 @@ def select_friend():
         friend_choice_position = int(friend_choice) - 1
         return friend_choice_position
     except:
-        print "ERROR"
+        print "ERROR:Choose friend again"
+        return select_friend()
 
 
 "STATUS WILL BE SET HERE"
@@ -188,7 +188,6 @@ def read_chat_history():
         for chat in friends[read].chats:
                 if chat.sent_by_me:
                         print '[%s] %s: %s' % (colored(chat.time.strftime("%b %d %Y %H:%M:%S"),'blue'), 'encoder said',colored(chat.message,'cyan'))
-                else:
                         print '[%s] %s read: %s' % (colored(chat.time.strftime("%b %d %Y %H:%M:%S"),'blue'), friends[read].name,colored(chat.message,'cyan'))
     else:
         print 'No chat found'
